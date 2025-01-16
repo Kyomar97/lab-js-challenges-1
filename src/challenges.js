@@ -200,14 +200,6 @@ function greatestProduct(matrix) {
           matrix[row + 3][col];
         maxProduct = Math.max(maxProduct, verticalProduct);
       }
-      if (row + 3 < rows && col + 3 < cols) {
-        const diagonalDownRightProduct =
-          matrix[row][col] *
-          matrix[row + 1][col + 1] *
-          matrix[row + 2][col + 2] *
-          matrix[row + 3][col + 3];
-        maxProduct = Math.max(maxProduct, diagonalDownRightProduct);
-      }
     }
   }
   return maxProduct;
